@@ -1,0 +1,123 @@
+﻿@model Fadiou.Models.Patient
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Patient</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nomPatient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomPatient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prenomPatient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prenomPatient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.adressePatient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adressePatient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateNaissancePatient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateNaissancePatient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sexePatient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sexePatient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telPatient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telPatient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.poidsPatient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.poidsPatient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.taillePatient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.taillePatient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.groupeSanguinPatient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.groupeSanguinPatient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.situationMatrimonialePatient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.situationMatrimonialePatient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfessionPatient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProfessionPatient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cniPatient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cniPatient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emailPatient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emailPatient)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idPatient }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

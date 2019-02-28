@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Fadiou.Models.Lit>
+
+@{
+    ViewBag.Title = "Liste des lits";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a class="btn btn-app" href="@Url.Action("Create", "Lits")" title="Nouveau">
+        <i class="fa fa-save"></i> Nouveau
+    </a>
+    @*@Html.ActionLink("Nouveau", "Create")*@
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Chambre.libelle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.codeLit)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Chambre.libelle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.codeLit)
+        </td>
+        <td>
+            <a class="btn btn-app" href="@Url.Action("Edit", "Lits", new { id=item.idLit })" title="Modifier">
+                <i class="fa fa-edit"></i>
+            </a>|
+            <a class="btn btn-app" href="@Url.Action("Delete", "Lits", new { id=item.idLit })" title="Modifier">
+                <i class="fa fa-remove"></i>
+            </a>
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.idLit }) |
+        @Html.ActionLink("Details", "Details", new { id=item.idLit }) |
+        @Html.ActionLink("Delete", "Delete", new { id=item.idLit })*@
+        </td>
+    </tr>
+}
+
+</table>

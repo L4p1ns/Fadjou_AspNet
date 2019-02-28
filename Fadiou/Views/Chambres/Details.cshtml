@@ -1,0 +1,35 @@
+﻿@model Fadiou.Models.Chambre
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Chambre</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.codeCh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.codeCh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.libelle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.libelle)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idCh }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

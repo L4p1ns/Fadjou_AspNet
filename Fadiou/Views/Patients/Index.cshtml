@@ -1,0 +1,106 @@
+﻿@model IEnumerable<Fadiou.Models.Patient>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nomPatient)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prenomPatient)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.adressePatient)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateNaissancePatient)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sexePatient)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telPatient)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.poidsPatient)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.taillePatient)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.groupeSanguinPatient)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.situationMatrimonialePatient)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProfessionPatient)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cniPatient)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emailPatient)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomPatient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.prenomPatient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.adressePatient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateNaissancePatient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sexePatient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telPatient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.poidsPatient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.taillePatient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.groupeSanguinPatient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.situationMatrimonialePatient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProfessionPatient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cniPatient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emailPatient)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idPatient }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idPatient }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idPatient })
+        </td>
+    </tr>
+}
+
+</table>

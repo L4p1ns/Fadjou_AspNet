@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Fadiou.Models.Chambre>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a class="btn btn-app" href="@Url.Action("Create", "Chambres")" title="Nouveau">
+        <i class="fa fa-save"></i> Nouveau
+    </a>
+    @*@Html.ActionLink("Create New", "Create")*@
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.codeCh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.libelle)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.codeCh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.libelle)
+        </td>
+        <td>
+            <a href="@Url.Action("Edit", "Chambres", new { id=item.idCh })" title="Modifier">
+                <i class="fa fa-edit"></i>
+            </a>|
+            <a href="@Url.Action("Delete", "Chambres", new { id=item.idCh })" title="Modifier">
+                <i class="fa fa-remove"></i>
+            </a>
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.idCh }) |
+        @Html.ActionLink("Details", "Details", new { id=item.idCh }) |
+        @Html.ActionLink("Delete", "Delete", new { id=item.idCh })*@
+        </td>
+    </tr>
+}
+
+</table>
