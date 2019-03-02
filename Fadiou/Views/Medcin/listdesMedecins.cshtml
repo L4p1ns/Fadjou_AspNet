@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Fadiou.Models.Medecin>
+
+@{
+    ViewBag.Title = "listdesMedecins";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>listdesMedecins</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.personne.nomPers)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.personne.prenomPers)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.personne.adressePers)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.specialteMed)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.personne.nomPers)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.personne.prenomPers)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.personne.adressePers)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.specialteMed)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.idMed }) |
+            @Html.ActionLink("Details", "Details", new { id = item.idMed }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.idMed })
+        </td>
+    </tr>
+}
+
+</table>

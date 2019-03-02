@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Fadiou.Models.MedcinViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+    <a href="@Url.Action("Create", "Medcin")" title="Nouveau" class="btn btn-app">
+        <i class="fa fa-save"></i>Nouveau
+    </a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nomPers)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prenomPers)
+        </th>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.sexePers)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emailPers)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telPers)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.specialteMed)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomPers)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.prenomPers)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sexePers)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emailPers)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telPers)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.specialteMed)
+        </td>
+        <td>
+            <a class="btn btn-app" href="@Url.Action("Edit", "Medcin", new { id=item.idPers })" title="Modifier">
+                <i class="fa fa-edit"></i>
+            </a>|
+            <a class="btn btn-app" href="@Url.Action("Delete", "Medcin", new { id=item.idPers })" title="Supprimer">
+                <i class="fa fa-remove"></i>
+            </a>
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.idPers }) |
+        @Html.ActionLink("Details", "Details", new { id=item.idPers }) |
+        @Html.ActionLink("Delete", "Delete", new { id=item.idPers })*@
+        </td>
+    </tr>
+}
+
+</table>

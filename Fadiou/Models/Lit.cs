@@ -15,7 +15,7 @@ namespace Fadiou.Models
 
         [MaxLength(2, ErrorMessage = "taille maximale 2"), 
             Required(ErrorMessage = "*")]
-        [Display(Name = "CodeLit")]
+        [Display(Name = "Code Lit")]
         public string codeLit { get; set; }
 
         public int  idChambre { get; set; }

@@ -19,5 +19,8 @@ namespace Fadiou.Models
         public DbSet<Medecin> medecins { get; set; }
         public DbSet<Personne> personnes { get; set; }
         public DbSet<Personnel> personnels { get; set; }
+
+        // Pas besoin de l inclure dans le contexe (Creer une table dans la BaseDeDonnee)
+        //public System.Data.Entity.DbSet<Fadiou.Models.MedcinViewModel> MedcinViewModels { get; set; }
     }
 }

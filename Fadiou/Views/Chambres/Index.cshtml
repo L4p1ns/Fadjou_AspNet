@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Liste des chambres</h2>
 
 <p>
     <a class="btn btn-app" href="@Url.Action("Create", "Chambres")" title="Nouveau">
@@ -36,7 +36,7 @@
             <a href="@Url.Action("Edit", "Chambres", new { id=item.idCh })" title="Modifier">
                 <i class="fa fa-edit"></i>
             </a>|
-            <a href="@Url.Action("Delete", "Chambres", new { id=item.idCh })" title="Modifier">
+            <a href="@Url.Action("Delete", "Chambres", new { id=item.idCh })" title="Supprimer">
                 <i class="fa fa-remove"></i>
             </a>
             @*@Html.ActionLink("Edit", "Edit", new { id=item.idCh }) |

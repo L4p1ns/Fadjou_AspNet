@@ -202,6 +202,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LitsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MedcinController.cs" />
     <Compile Include="Controllers\PatientsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -214,6 +215,7 @@
     <Compile Include="Models\Infirmier.cs" />
     <Compile Include="Models\Lit.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MedcinViewModel.cs" />
     <Compile Include="Models\Medecin.cs" />
     <Compile Include="Models\Patient.cs" />
     <Compile Include="Models\Personne.cs" />
@@ -7331,6 +7333,13 @@
     <Content Include="Views\Chambres\Details.cshtml" />
     <Content Include="Views\Chambres\Edit.cshtml" />
     <Content Include="Views\Chambres\Index.cshtml" />
+    <Content Include="Views\Medcin\Create.cshtml" />
+    <Content Include="Views\Medcin\Delete.cshtml" />
+    <Content Include="Views\Medcin\Details.cshtml" />
+    <Content Include="Views\Medcin\Edit.cshtml" />
+    <Content Include="Views\Medcin\Index.cshtml" />
+    <Content Include="Views\Medcin\listdesMedecins.cshtml" />
+    <Content Include="Views\Medcin\listeDesPersonnes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
