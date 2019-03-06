@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Fadiou.Models;
+using PagedList;
 
 namespace Fadiou.Controllers
 {
@@ -15,9 +16,14 @@ namespace Fadiou.Controllers
         private bdFadiouContext db = new bdFadiouContext();
 
         // GET: Medcin
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
-            return View(getListMedecin().ToList());
+            page = page.HasValue ? page : 1;
+            int sizePage = 2;
+            int pageNumber = (page ?? 1);
+            var lesMedecins = getListMedecin().ToList();
+            return View(lesMedecins.ToPagedList(sizePage, pageNumber));
+            //return View(getListMedecin().ToList());
         }
 
         // GET: Medcin/Details/5

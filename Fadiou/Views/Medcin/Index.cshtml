@@ -1,4 +1,7 @@
-﻿@model IEnumerable<Fadiou.Models.MedcinViewModel>
+﻿@*@model IEnumerable<Fadiou.Models.MedcinViewModel>*@
+@model PagedList.IPagedList<Fadiou.Models.MedcinViewModel>
+@using PagedList.Mvc;
+
 
 @{
     ViewBag.Title = "Index";
@@ -16,59 +19,61 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.nomPers)
+            @Html.DisplayNameFor(model => model.First().nomPers)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.prenomPers)
+            @Html.DisplayNameFor(model => model.First().prenomPers)
         </th>
-       
+
         <th>
-            @Html.DisplayNameFor(model => model.sexePers)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.emailPers)
+            @Html.DisplayNameFor(model => model.First().sexePers)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.telPers)
+            @Html.DisplayNameFor(model => model.First().emailPers)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.specialteMed)
+            @Html.DisplayNameFor(model => model.First().telPers)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().specialteMed)
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.nomPers)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.prenomPers)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.sexePers)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.emailPers)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.telPers)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.specialteMed)
-        </td>
-        <td>
-            <a class="btn btn-app" href="@Url.Action("Edit", "Medcin", new { id=item.idPers })" title="Modifier">
-                <i class="fa fa-edit"></i>
-            </a>|
-            <a class="btn btn-app" href="@Url.Action("Delete", "Medcin", new { id=item.idPers })" title="Supprimer">
-                <i class="fa fa-remove"></i>
-            </a>
-            @*@Html.ActionLink("Edit", "Edit", new { id=item.idPers }) |
-        @Html.ActionLink("Details", "Details", new { id=item.idPers }) |
-        @Html.ActionLink("Delete", "Delete", new { id=item.idPers })*@
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nomPers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prenomPers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sexePers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.emailPers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.telPers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.specialteMed)
+            </td>
+            <td>
+                <a class="btn btn-app" href="@Url.Action("Edit", "Medcin", new { id=item.idPers })" title="Modifier">
+                    <i class="fa fa-edit"></i>
+                </a>|
+                <a class="btn btn-app" href="@Url.Action("Delete", "Medcin", new { id=item.idPers })" title="Supprimer">
+                    <i class="fa fa-remove"></i>
+                </a>
+                @*@Html.ActionLink("Edit", "Edit", new { id=item.idPers }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.idPers }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.idPers })*@
+            </td>
+        </tr>
+    }
 
 </table>
+@Html.PagedListPager(Model, Page =>Url.Action("Index", new { Page}))

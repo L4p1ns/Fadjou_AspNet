@@ -266,3 +266,7 @@ C:\Users\ADMIN\source\repos\Fadiou\Fadiou\obj\Debug\Fadiou.csproj.CoreCompileInp
 C:\Users\ADMIN\source\repos\Fadiou\Fadiou\obj\Debug\Fadiou.csproj.CopyComplete
 C:\Users\ADMIN\source\repos\Fadiou\Fadiou\obj\Debug\Fadiou.dll
 C:\Users\ADMIN\source\repos\Fadiou\Fadiou\obj\Debug\Fadiou.pdb
+C:\Users\ADMIN\source\repos\Fadiou\Fadiou\bin\PagedList.dll
+C:\Users\ADMIN\source\repos\Fadiou\Fadiou\bin\PagedList.Mvc.dll
+C:\Users\ADMIN\source\repos\Fadiou\Fadiou\bin\PagedList.xml
+C:\Users\ADMIN\source\repos\Fadiou\Fadiou\bin\PagedList.Mvc.xml

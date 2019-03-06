@@ -28,7 +28,8 @@ namespace Fadiou
                       "~/asset/bower_components/font-awesome/css/font-awesome.min.css",
                       "~/asset/bower_components/Ionicons/css/ionicons.min.css",
                       "~/asset/dist/css/AdminLTE.min.css",
-                      "~/asset/dist/css/skins/skin-blue.min.css"));
+                      "~/asset/dist/css/skins/skin-blue.min.css",
+                      "~/Content/PagedList.css"));
         }
     }
 }
