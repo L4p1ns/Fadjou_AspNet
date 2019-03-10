@@ -261,7 +261,6 @@ C:\Users\ADMIN\source\repos\Fadiou\Fadiou\bin\fr\EntityFramework.SqlServer.resou
 C:\Users\ADMIN\source\repos\Fadiou\Fadiou\bin\fr\Microsoft.AspNet.Identity.Core.resources.dll
 C:\Users\ADMIN\source\repos\Fadiou\Fadiou\bin\fr\Microsoft.AspNet.Identity.Owin.resources.dll
 C:\Users\ADMIN\source\repos\Fadiou\Fadiou\bin\fr\Microsoft.AspNet.Identity.EntityFramework.resources.dll
-C:\Users\ADMIN\source\repos\Fadiou\Fadiou\obj\Debug\Fadiou.csprojAssemblyReference.cache
 C:\Users\ADMIN\source\repos\Fadiou\Fadiou\obj\Debug\Fadiou.csproj.CoreCompileInputs.cache
 C:\Users\ADMIN\source\repos\Fadiou\Fadiou\obj\Debug\Fadiou.csproj.CopyComplete
 C:\Users\ADMIN\source\repos\Fadiou\Fadiou\obj\Debug\Fadiou.dll
@@ -270,3 +269,4 @@ C:\Users\ADMIN\source\repos\Fadiou\Fadiou\bin\PagedList.dll
 C:\Users\ADMIN\source\repos\Fadiou\Fadiou\bin\PagedList.Mvc.dll
 C:\Users\ADMIN\source\repos\Fadiou\Fadiou\bin\PagedList.xml
 C:\Users\ADMIN\source\repos\Fadiou\Fadiou\bin\PagedList.Mvc.xml
+C:\Users\ADMIN\source\repos\Fadiou\Fadiou\obj\Debug\Fadiou.csprojAssemblyReference.cache

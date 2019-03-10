@@ -206,6 +206,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ChambresController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InfirmierController.cs" />
     <Compile Include="Controllers\LitsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MedcinController.cs" />
@@ -219,6 +220,7 @@
     <Compile Include="Models\Chambre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Infirmier.cs" />
+    <Compile Include="Models\InfirmierViewModel.cs" />
     <Compile Include="Models\Lit.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MedcinViewModel.cs" />
@@ -7347,6 +7349,13 @@
     <Content Include="Views\Medcin\Index.cshtml" />
     <Content Include="Views\Medcin\listdesMedecins.cshtml" />
     <Content Include="Views\Medcin\listeDesPersonnes.cshtml" />
+    <Content Include="Views\Infirmier\Create.cshtml" />
+    <Content Include="Views\Infirmier\Delete.cshtml" />
+    <Content Include="Views\Infirmier\Details.cshtml" />
+    <Content Include="Views\Infirmier\Edit.cshtml" />
+    <Content Include="Views\Infirmier\Index.cshtml" />
+    <Content Include="Views\Infirmier\listeDesPersonnes.cshtml" />
+    <Content Include="Views\Infirmier\listdesInfirmiers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

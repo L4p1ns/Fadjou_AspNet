@@ -174,11 +174,12 @@ namespace Fadiou.Controllers
 
         public List<MedcinViewModel> getListMedecin()
         {
-            var listPersonne = db.personnes.ToList();
+            var listPersonne = db.medecins.ToList();
             List<MedcinViewModel> lesMedecins = new List<MedcinViewModel>();
-            foreach(var i in listPersonne)
+            foreach(var x in listPersonne)
             {
                 MedcinViewModel m = new MedcinViewModel();
+                var i = db.personnes.Find(x.idMed);
                 m.idPers = i.idPers;
                 m.nomPers = i.nomPers;
                 m.adressePers = i.adressePers;
@@ -188,7 +189,7 @@ namespace Fadiou.Controllers
                 m.prenomPers = i.prenomPers;
                 m.sexePers = i.sexePers;
                 m.situationMatPers = i.situationMatPers;
-                m.specialteMed = db.medecins.Find(i.idPers).specialteMed;
+                m.specialteMed = x.specialteMed;
                 m.telPers = i.telPers;
                 lesMedecins.Add(m);
             }
