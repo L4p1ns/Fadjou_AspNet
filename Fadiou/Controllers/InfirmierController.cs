@@ -20,9 +20,9 @@ namespace Fadiou.Controllers
         {
             page = page.HasValue ? page : 1;
             int sizePage = 2;
-            int pageNumber = (page ?? 1);
+            //int pageNumber = (page ?? 1);
             var lesinfirmiers = getListInfirmiers().ToList();
-            return View(lesinfirmiers.ToPagedList(sizePage, pageNumber));
+            return View(lesinfirmiers.ToPagedList((int)page, sizePage));
            // return View(db.personnes.ToList());
         }
 

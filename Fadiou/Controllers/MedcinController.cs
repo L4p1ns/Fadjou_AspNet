@@ -19,11 +19,11 @@ namespace Fadiou.Controllers
         public ActionResult Index(int? page)
         {
             page = page.HasValue ? page : 1;
-            int sizePage = 2;
-            int pageNumber = (page ?? 1);
+            int sizePage = 10;
+           // int pageNumber = (page ?? 1);
             var lesMedecins = getListMedecin().ToList();
-            return View(lesMedecins.ToPagedList(sizePage, pageNumber));
-            //return View(getListMedecin().ToList());
+            return View(lesMedecins.ToPagedList((int)page, sizePage);
+            // return View(lesMedecins.ToPagedList(sizePage, pageNumber));
         }
 
         // GET: Medcin/Details/5
