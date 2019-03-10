@@ -16,6 +16,34 @@
         <i class="fa fa-save"></i>Nouveau
     </a>
 </p>
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="widget">
+            <div class="widget-body">
+                @using (Html.BeginForm("Index", "Medcin", FormMethod.Get))
+                {
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <b>Nom</b> @Html.TextBox("Nom", ViewBag.Nom as string, new { @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <b>Prénom</b> @Html.TextBox("Prenom", ViewBag.Prenom as string, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <input type="submit" value="Rechercher" class="btn btn-primary" />
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
 <table class="table">
     <tr>
         <th>
@@ -76,4 +104,4 @@
     }
 
 </table>
-@Html.PagedListPager(Model, Page =>Url.Action("Index", new { Page}))
+@Html.PagedListPager(Model, Page =>Url.Action("Index", new { Page, Nom=ViewBag.Nom, Prenom=ViewBag.Prenom }))

@@ -16,12 +16,22 @@ namespace Fadiou.Controllers
         private bdFadiouContext db = new bdFadiouContext();
 
         // GET: Medcin
-        public ActionResult Index(int? page)
+        public ActionResult Index(int? page, string Nom, string Prenom)
         {
+            ViewBag.Nom = !string.IsNullOrEmpty(Nom) ? Nom : string.Empty;
+            ViewBag.Prenom = !string.IsNullOrEmpty(Prenom) ? Prenom : string.Empty;
+
             page = page.HasValue ? page : 1;
             int sizePage = 10;
-           // int pageNumber = (page ?? 1);
             var lesMedecins = getListMedecin().ToList();
+            if (!string.IsNullOrEmpty(Nom))
+            {
+                lesMedecins = lesMedecins.Where(a => a.nomPers.ToUpper().Contains(Nom.ToUpper())).ToList();
+            }
+            if (!string.IsNullOrEmpty(Prenom))
+            {
+                lesMedecins = lesMedecins.Where(a => a.prenomPers.ToUpper().Contains(Prenom.ToUpper())).ToList();
+            }
             return View(lesMedecins.ToPagedList((int)page, sizePage);
             // return View(lesMedecins.ToPagedList(sizePage, pageNumber));
         }
