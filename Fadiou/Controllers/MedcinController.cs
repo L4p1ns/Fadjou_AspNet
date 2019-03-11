@@ -32,7 +32,7 @@ namespace Fadiou.Controllers
             {
                 lesMedecins = lesMedecins.Where(a => a.prenomPers.ToUpper().Contains(Prenom.ToUpper())).ToList();
             }
-            return View(lesMedecins.ToPagedList((int)page, sizePage);
+            return View(lesMedecins.ToPagedList((int)page, sizePage));
             // return View(lesMedecins.ToPagedList(sizePage, pageNumber));
         }
 
