@@ -10,7 +10,7 @@ namespace Fadiou.Models
     public class Ordonnance
     {
         [Key]
-        public int IdOrdonnance{ get; set; }
+        public int IdOrdonnance { get; set; }
 
         [Display(Name = "Date Ordonance")]
         public DateTime DateOrdonnance { get; set; }

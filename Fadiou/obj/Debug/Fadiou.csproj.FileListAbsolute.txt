@@ -144,7 +144,6 @@ C:\Users\ADMIN\source\repos\Fadiou\Fadiou\bin\roslyn\System.Security.Cryptograph
 C:\Users\ADMIN\source\repos\Fadiou\Fadiou\bin\roslyn\System.ValueTuple.dll
 C:\Users\ADMIN\source\repos\Fadiou\Fadiou\bin\roslyn\VBCSCompiler.exe
 C:\Users\ADMIN\source\repos\Fadiou\Fadiou\obj\Debug\Fadiou.csproj.CoreCompileInputs.cache
-C:\Users\ADMIN\source\repos\Fadiou\Fadiou\obj\Debug\Fadiou.csprojAssemblyReference.cache
 C:\Users\ADMIN\source\repos\Fadiou\Fadiou\bin\ApplicationInsights.config
 C:\Users\ADMIN\source\repos\Fadiou\Fadiou\bin\Fadiou.dll.config
 C:\Users\ADMIN\source\repos\Fadiou\Fadiou\bin\Fadiou.dll

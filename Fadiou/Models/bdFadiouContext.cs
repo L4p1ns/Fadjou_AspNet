@@ -19,6 +19,12 @@ namespace Fadiou.Models
         public DbSet<Medecin> medecins { get; set; }
         public DbSet<Personne> personnes { get; set; }
         public DbSet<Personnel> personnels { get; set; }
+        public DbSet<Soins> soins { get; set; }
+        public DbSet<Consultation> consultations { get; set; }
+        public DbSet<Facture> factures{ get; set; }
+        public DbSet<FileAttente> fileAttentes { get; set; }
+        public DbSet<Ordonnance> ordonnances { get; set; }
+        public DbSet<RendezVous> RendezVous { get; set; }
 
         // Pas besoin de l inclure dans le contexe (Creer une table dans la BaseDeDonnee)
         //public System.Data.Entity.DbSet<Fadiou.Models.MedcinViewModel> MedcinViewModels { get; set; }

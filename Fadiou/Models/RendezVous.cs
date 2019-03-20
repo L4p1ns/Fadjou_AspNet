@@ -11,14 +11,14 @@ namespace Fadiou.Models
     {
         [Key]
         public int IdRv { get; set; }
-       
+
         [Display(Name = "Date Rendez vous")]
         public DateTime DateRv { get; set; }
 
         [MaxLength(40, ErrorMessage = "taille maximale 40"),
           Required(ErrorMessage = "*")]
         [Display(Name = "Motif du rendez vous")]
-        public String MotifRv{ get; set; }
+        public String MotifRv { get; set; }
         public int idPatient { get; set; }
         [ForeignKey("idPatient")]
         public virtual Patient patient { get; set; }
